@@ -1,5 +1,6 @@
 # Ghibli-Gram
-**An Instagram clone with the aesthetic style of Studio Ghibli**
+**An Instagram web app clone with the aesthetic style of Studio Ghibli**
+
 Developed to gain experience with React.
 ## Profile Page
 ![alt text](screenshot_1.png)
