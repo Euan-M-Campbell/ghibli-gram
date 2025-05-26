@@ -6,3 +6,4 @@ Developed to gain experience with React.
 ![alt text](screenshot_1.png)
 ## Profile Post Modal
 ![alt text](screenshot_2.png)
+![image](https://github.com/user-attachments/assets/95b71489-5bb8-4cb2-b45b-c9e194af8354)
