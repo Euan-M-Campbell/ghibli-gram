@@ -11,3 +11,41 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.page {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000; /* base black */
+  overflow: hidden;
+}
+
+/* Background layer */
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/background.png');
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  background-blend-mode: overlay;
+  filter: blur(8px); /* this is the blur */
+  opacity: 0.4;      /* control how strong the texture is */
+  z-index: 0;
+}
+
+/* Everything inside the page stays on top */
+.page > * {
+  position: relative;
+  z-index: 1;
+}
+
+.page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* adjust opacity */
+  z-index: 0.5; /* just needs to be above ::before */
+}

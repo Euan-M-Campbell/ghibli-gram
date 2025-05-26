@@ -1,0 +1,106 @@
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#profile-page {
+    height: 100vh;
+    overflow-y: auto;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.page-header {
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid rgba(85, 85, 85, 0.5);
+}
+
+.profile-pic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    padding: 20px;
+    text-align: left;
+    color: white;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.profile-stats p {
+    color: lightgrey;
+    margin-right: 5px !important;
+    margin: 0;
+}
+
+.profile-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 25px;
+    gap: 8px;
+}
+
+.profile-post {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-post img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+    transition: transform 0.2s;
+}
+
+.profile-post:hover img {
+    transform: scale(1.02);
+}
+
+/* Hide Scrollbar */
+#profile-page::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+#profile-page {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
